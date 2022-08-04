@@ -18,16 +18,17 @@ function App() {
 
   console.log("news", news);
   return (
-    <div className="App">
+        <div className="App">
+          <h1><u>News Application</u></h1>
               {news && news.map((item , index)=> {
                 return(
                   <Card 
                   key={index}
                   hoverable
-                  style={{width : "100%"}}
+                  style={{width : "70%", marginLeft:"15%",background:"pink"}}
                   cover = {<img alt = "images" src= {item.urlToImage}/>} >
                   <Meta title= {item.title} description = {item.content}/>
-                  <a href={item.url} target="_blank" rel="noopnner">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <Button type='primary' style={{marginTop: "10px"}}>Read More</Button>
                   </a>
                   </Card>
